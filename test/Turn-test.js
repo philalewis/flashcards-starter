@@ -9,19 +9,24 @@ const cards = data.prototypeData;
 describe('Turn', function() {
 
   it('should be a function', function() {
-    const turn = new Turn();
     expect(Turn).to.be.a('function');
   })
 
   it('should be instatiated with a card', function() {
-    const card = new Card(cards[0].id, cards[0].question, cards[0].answers, cards[0].correctAnswer);
+    const card = new Card(cards[0].id, 
+      cards[0].question, 
+      cards[0].answers, 
+      cards[0].correctAnswer);
     const turn = new Turn(card);
 
     expect(turn.card).to.be.an.instanceof(Card);
   })
 
   it('should be instantiated with the user\'s guess', function() {
-    const card = new Card(cards[1].id, cards[1].question, cards[1].answers, cards[1].correctAnswer);
+    const card = new Card(cards[1].id, 
+      cards[1].question, 
+      cards[1].answers, 
+      cards[1].correctAnswer);
     const turn = new Turn(card, 'array');
 
     expect(turn.guess).to.be.a('string');
@@ -29,21 +34,30 @@ describe('Turn', function() {
   })
 
   it('should return the user\'s guess', function() {
-    const card = new Card(cards[2].id, cards[2].question, cards[2].answers, cards[2].correctAnswer);
+    const card = new Card(cards[2].id, 
+      cards[2].question, 
+      cards[2].answers, 
+      cards[2].correctAnswer);
     const turn = new Turn(card, 'accessor method');
 
     expect(turn.returnGuess()).to.equal('accessor method');
   })
 
   it('should return the card', function() {
-    const card = new Card(cards[3].id, cards[3].question, cards[3].answers, cards[3].correctAnswer);
+    const card = new Card(cards[3].id, 
+      cards[3].question, 
+      cards[3].answers, 
+      cards[3].correctAnswer);
     const turn = new Turn(card, 'iteration method');
 
     expect(turn.returnCard()).to.be.an.instanceof(Card);
   })
 
   it('should determine if the user\'s guess is correct', function() {
-    const card = new Card(cards[4].id, cards[4].question, cards[4].answers, cards[4].correctAnswer);
+    const card = new Card(cards[4].id, 
+      cards[4].question, 
+      cards[4].answers, 
+      cards[4].correctAnswer);
     const turn1 = new Turn(card, 'mutator method');
     const turn2 = new Turn(card, 'iteration method');
 
@@ -53,14 +67,20 @@ describe('Turn', function() {
   })
 
   it('should let the user know if they got it right', function() {
-    const card = new Card(cards[5].id, cards[5].question, cards[5].answers, cards[5].correctAnswer);
+    const card = new Card(cards[5].id, 
+      cards[5].question, 
+      cards[5].answers, 
+      cards[5].correctAnswer);
     const turn = new Turn(card, 'map()');
 
     expect(turn.giveFeedback()).to.equal('incorrect!')
   })
 
   it('should let the user know if they got it wrong', function() {
-    const card = new Card(cards[6].id, cards[6].question, cards[6].answers, cards[6].correctAnswer);
+    const card = new Card(cards[6].id, 
+      cards[6].question, 
+      cards[6].answers, 
+      cards[6].correctAnswer);
     const turn = new Turn(card, 'splice()');
 
     expect(turn.giveFeedback()).to.equal('correct!');

@@ -13,7 +13,8 @@ describe('Turn', function() {
   })
 
   it('should be instatiated with a card', function() {
-    const card = new Card(cards[0].id, 
+    const card = new Card(
+      cards[0].id, 
       cards[0].question, 
       cards[0].answers, 
       cards[0].correctAnswer);
@@ -23,7 +24,8 @@ describe('Turn', function() {
   })
 
   it('should be instantiated with the user\'s guess', function() {
-    const card = new Card(cards[1].id, 
+    const card = new Card(
+      cards[1].id, 
       cards[1].question, 
       cards[1].answers, 
       cards[1].correctAnswer);
@@ -34,7 +36,8 @@ describe('Turn', function() {
   })
 
   it('should return the user\'s guess', function() {
-    const card = new Card(cards[2].id, 
+    const card = new Card(
+      cards[2].id, 
       cards[2].question, 
       cards[2].answers, 
       cards[2].correctAnswer);
@@ -44,7 +47,8 @@ describe('Turn', function() {
   })
 
   it('should return the card', function() {
-    const card = new Card(cards[3].id, 
+    const card = new Card(
+      cards[3].id, 
       cards[3].question, 
       cards[3].answers, 
       cards[3].correctAnswer);
@@ -54,7 +58,8 @@ describe('Turn', function() {
   })
 
   it('should determine if the user\'s guess is correct', function() {
-    const card = new Card(cards[4].id, 
+    const card = new Card(
+      cards[4].id, 
       cards[4].question, 
       cards[4].answers, 
       cards[4].correctAnswer);
@@ -67,7 +72,8 @@ describe('Turn', function() {
   })
 
   it('should let the user know if they got it right', function() {
-    const card = new Card(cards[5].id, 
+    const card = new Card(
+      cards[5].id, 
       cards[5].question, 
       cards[5].answers, 
       cards[5].correctAnswer);
@@ -77,7 +83,8 @@ describe('Turn', function() {
   })
 
   it('should let the user know if they got it wrong', function() {
-    const card = new Card(cards[6].id, 
+    const card = new Card(
+      cards[6].id, 
       cards[6].question, 
       cards[6].answers, 
       cards[6].correctAnswer);

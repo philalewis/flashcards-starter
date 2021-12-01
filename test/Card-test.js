@@ -5,7 +5,7 @@ const Card = require('../src/Card');
 
 describe('Card', function() {
 
-  it('should be a function', function() {
+  it('should be a function', () => {
     expect(Card).to.be.a('function');
   });
 
@@ -14,12 +14,12 @@ describe('Card', function() {
     expect(card).to.be.an.instanceof(Card);
   }); 
 
-  it('should have an id', function() {
+  it('should have an id', () => {
     const card = new Card(1)
     expect(card.id).to.equal(1);
   })
 
-  it('should store a question', function() {
+  it('should store a question', () => {
     const card = new Card(1, 
       'What allows you to define a set of related information using key-value pairs?', 
       ['object', 'array', 'function'], 
@@ -27,7 +27,7 @@ describe('Card', function() {
     expect(card.question).to.equal('What allows you to define a set of related information using key-value pairs?');
   });  
 
-  it('should store a list of possible answers', function() {
+  it('should store a list of possible answers', () => {
     const card = new Card(1, 
       'What allows you to define a set of related information using key-value pairs?', 
       ['object', 'array', 'function'], 
@@ -35,7 +35,7 @@ describe('Card', function() {
     expect(card.answers).to.deep.equal(['object', 'array', 'function']);
   });  
 
-  it('should store the correct answer', function() {
+  it('should store the correct answer', () => {
     const card = new Card(1, 
       'What allows you to define a set of related information using key-value pairs?', 
       ['object', 'array', 'function'], 

@@ -105,7 +105,6 @@ describe('Round', function() {
     round.takeTurn('iteration method');
     round.takeTurn('mutator method');
     round.takeTurn('iteration method');
-    round.endRound();
-    expect(console.log.calledWith('** Round over! ** You answered 60% of the questions correctly!')).to.be.true;
+    expect(round.endRound()).to.equal('** Round over! ** You answered 60% of the questions correctly!')
   })
 })

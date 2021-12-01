@@ -27,9 +27,9 @@ describe('Round', function() {
   })
 
   it('should hold the deck of cards', () => {
-    expect(round.deck.length).to.equal(30);
-    expect(round.deck[0].answers.length).to.equal(3);
-    expect(round.deck[1].id).to.equal(2);
+    expect(round.deck.cards.length).to.equal(30);
+    expect(round.deck.cards[0].answers.length).to.equal(3);
+    expect(round.deck.cards[1].id).to.equal(2);
   })
 
   it('should hold the current card', () => {
@@ -39,10 +39,6 @@ describe('Round', function() {
   it('should return the current card', () => {
     expect(round.returnCurrentCard()).to.be.an.instanceof(Card);
     expect(round.returnCurrentCard().id).to.equal(1);
-  })
-
-  it('should have a takeTurn method', () => {
-    expect(round.takeTurn('string')).to.be.a('function');
   })
 
   it('should instantiate a new Turn class when calling takeTurn', () => {
@@ -110,6 +106,6 @@ describe('Round', function() {
     round.takeTurn('mutator method');
     round.takeTurn('iteration method');
     round.endRound();
-    expect(console.log).to.equal('** Round over! ** You answered 60% of the questions correctly!')
+    expect(console.log.calledWith('** Round over! ** You answered 60% of the questions correctly!')).to.be.true;
   })
 })

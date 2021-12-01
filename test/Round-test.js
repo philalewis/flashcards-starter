@@ -11,9 +11,14 @@ const cardData = data.prototypeData;
 describe('Round', function() {
   
   let cards = [];
-  cardData.forEach(card => {cards.push(new Card(
-    card.id, card.question, card.answers, card.correctAnswer
-  ))})
+  cardData.forEach(card => {
+    cards.push(new Card(
+      card.id, 
+      card.question, 
+      card.answers, 
+      card.correctAnswer
+    ))
+  })
   let deck;
   let round;
 

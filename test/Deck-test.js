@@ -10,9 +10,14 @@ describe('Deck', function() {
 
   let deck;
   let cards = [];
-  cardData.forEach(card => {cards.push(new Card(
-    card.id, card.question, card.answers, card.correctAnswer
-  ))})
+  cardData.forEach(card => {
+    cards.push(new Card(
+      card.id, 
+      card.question, 
+      card.answers, 
+      card.correctAnswer
+    ))
+  })
   
   beforeEach( () => {
     deck = new Deck(cards);

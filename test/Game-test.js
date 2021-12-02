@@ -29,13 +29,21 @@ describe('Game', () => {
     game = new Game(round);
   })
 
-  it('should keep track of the current round', () => {
+  it('should keeep track of the current round', () => {
+    expect(game.currentRound).to.equal({});
+  })
+
+  it('should create cards', () => {
+    game.start();
+    expect(game.round.deck[0]).to.be.an.instanceof(Card);
+  })
+
+  it('should put cards in the deck', () => {
+    game.start();
+    expect(game.round.deck).to.be.an.instanceof(Deck);
+  })
+
+  it('should create a new round', () => {
     expect(game.currentRound).to.be.an.instanceof(Round);
   })
-
-  it('should be able to start playing', () => {
-    expect(game.start()).is.a('function');
-  })
-
-  
 })

@@ -8,7 +8,7 @@ const Round = require('../src/Round');
 const data = require('../src/data.js');
 const cardData = data.prototypeData;
 
-describe('Round', function() {
+describe('Round', () => {
   
   let cards = [];
   cardData.forEach(card => {

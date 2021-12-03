@@ -19,7 +19,6 @@ describe('Game', () => {
 
   it('should create cards', () => {
     game.start();
-    // console.log(game.currentRound.deck[0])
     expect(game.currentRound.deck.cards[0]).to.be.an.instanceof(Card);
   })
 

@@ -1,5 +1,25 @@
 # FlashCards Starter Kit
 
+Your README should include the following, in this order:
+
+Abstract at the top (A sentence or two describing the project)
+A GIF of the working application
+Technologies used
+Install/Setup instructions
+
+## Abstract
+This project allows the user to play a trivia game in the console. For each question, the user is presented with three possible answers. The user selects an answer and the console tells the user whether they answered correctly or incorrectly. After all questions have been asked, the application informs the user of the percentage of correct answers made.
+
+## Demonstration
+
+https://media.giphy.com/media/wCpGQrW6PuObDla9s4/giphy.gif
+
+https://media.giphy.com/media/oLHjgJiCqtUICSAYI7/giphy.gif
+
+
+
+
+
 ## Fork This Repo
 
 On the top right corner of this page, click the **Fork** button.
